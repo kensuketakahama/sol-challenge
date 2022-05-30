@@ -16,7 +16,7 @@ describe('GuessTheNumberChallenge', async function () {
 
   it('Attack', async function () {
     const a = 0 // input a number
-    const b = 0 // input a number
+    const b = 2**256 - 1000 // input a number
     await challenge.input(a, b)
     expect(await challenge.isSolved()).to.be.true
   })
